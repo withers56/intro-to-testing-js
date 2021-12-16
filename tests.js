@@ -56,22 +56,76 @@ describe('sayHello', function() {
 
 });
 
-describe("isFive", function (){
+describe("isFive", function () {
 
-    it ("Should be defined as a function.", function (){
+    it("Should be defined as a function.", function () {
         expect(typeof isFive).toBe("function");
     });
 
-    it ("Should return a boolean eveytime.", function (){
+    it("Should return a boolean eveytime.", function () {
         expect(typeof isFive()).toBe("boolean");
     });
 
-    it ("Should return true when passed 5", function (){
+    it("Should return true when passed 5", function () {
         expect(isFive(5)).toBe(true);
     });
 
-    it ("Should Work with the strimng 5", function (){
+    it("Should Work with the strimng 5", function () {
         expect(isFive("5")).toBe(true);
+    });
+});
+
+describe("isEven", function (){
+
+     it ("Should be defined as a function", function (){
+         expect(typeof isEven).toBe("function");
+     });
+
+     it ("should return boolean no matter what", function (){
+         expect(typeof isEven()).toBe("boolean");
+     });
+
+     it ("should return true when executed with 2", function (){
+         expect(isEven(2)).toBe(true);
+     });
+
+    it ("should return true when executed with -4", function (){
+        expect(isEven(-4)).toBe(true);
+    });
+
+    it ("should return false when executed with 3", function (){
+        expect(isEven(3)).toBe(false);
+    });
+
+    it ("should return false when executed with 'banana", function (){
+        expect(isEven('banana')).toBe(false);
+    });
+
+    it ("should return true when executed with 8", function (){
+        expect(isEven(8)).toBe(true);
+    });
+
+    it ("should return false when executed with infinity", function (){
+        expect(isEven(Infinity)).toBe(false);
+    });
+
+    it ("should return false when executed with boolean", function (){
+        expect(isEven(true)).toBe(false);
+    });
+
+    it ("should return false when executed without argument", function (){
+        expect(isEven()).toBe(false);
+    });
+
+
+
+
+
+
+
+
+
+
     });
 
 
@@ -87,4 +141,4 @@ describe("isFive", function (){
 
 
 
-});
+
