@@ -157,6 +157,47 @@ describe("isVowel", function (){
     });
 });
 
+describe("add", function (){
+
+    it ("should be defined as a function", function (){
+        expect(typeof add).toBe('function');
+    });
+
+    it ("Should return 5 with arguments 2 and 3", function (){
+        expect(add(2, 3)).toBe(5);
+    });
+
+    it ("Should return -12 with arguments -3 and -9", function (){
+        expect(add(-3, -9)).toBe(-12);
+    });
+
+    it ("Should return 1 with arguments '5' and 6", function (){
+        expect(add('5', 6)).toBe(11);
+    });
+
+    it ("Should return 6 with arguments '-4' and '10'", function (){
+        expect(add('-4', '10')).toBe(6);
+    });
+
+    it ("Should return NaN with 'banana' and 'split'", function (){
+        expect(add('banana', 'split')).toBe("NaN");
+    });
+
+    it ("Should return NaN with 2 and 'apples'", function (){
+        expect(add(2, 'apples')).toBe("NaN");
+    });
+
+    it ("Should return NaN with null", function (){
+        expect(add()).toBe("NaN");
+    });
+
+
+
+
+
+
+});
+
 
 
 
